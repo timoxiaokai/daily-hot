@@ -13,7 +13,8 @@ import { responseError, responseSuccess } from '@/lib/utils';
 
 export async function GET() {
   // 官方 url
-  const url = 'https://top.baidu.com/api/board?platform=wise&tab=realtime';
+  //const url = 'https://top.baidu.com/api/board?platform=wise&tab=realtime';
+  const url = 'https://api.1314.cool/getbaiduhot/';
   try {
     // 请求数据
     const response = await fetch(url);
@@ -42,4 +43,5 @@ export async function GET() {
   } catch {
     return NextResponse.json(responseError);
   }
+
 }
